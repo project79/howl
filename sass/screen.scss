@@ -1,0 +1,632 @@
+// Howl theme settings
+// Use this variables to adopt the theme to your needs
+// Colors
+$brown: #2e2924;
+$green: #76a83a;
+$gray: #e5e5e5;
+$black: #333;
+$white: #fff;
+$blue: #2980b9;
+
+// Fonts
+$serif: Georgia, 'Times New Roman', Times, serif;
+$sans-serif: Helvetica, Arial, Verdana, sans-serif;
+$mono: 'Consolas', 'Lucida Console', 'Courier New', 'Monaco', Courier, monospace;
+
+// Weights
+$light: 300;
+$regular: 400;
+$semi-bold: 600;
+$bold: 700;
+
+// Base font
+$base-font-family: $sans-serif;
+$base-font-color: $black;
+$base-font-size: 14px;
+
+// Headings
+$heading-font-family: $sans-serif;
+$heading-font-color: $black;
+
+// Links
+$link: $blue;
+
+// Spacing, Margin, Padding
+$spacing: 1.5em;
+
+
+/* Howl Theme for Wolfcms by Dejan Andjelkovic, 2015 */
+
+/* Reset
+----------------------------- */
+ @import "reset";
+
+/*  Base 
+----------------------------- */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: $base-font-size;
+    background: $gray;
+    color: $base-font-color;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/*  Links
+----------------------------- */
+
+a {
+    color: $link;
+    text-decoration: none;
+    word-wrap: break-word;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: $black;
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+    background: none;
+}
+
+a:hover img {
+    border: none;
+    background: none;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+/*  Typography
+----------------------------- */
+
+p {
+    margin-bottom: $spacing;
+}
+
+p.lead {
+    font-size: 1.2em;
+}
+
+/*  Images
+----------------------------- */
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+p img { 
+    margin: 0; 
+}
+
+p img.left { 
+    float: left; 
+    margin: 0 1em 1em 0; 
+    padding: 0; 
+}
+
+p img.right { 
+    float: right; 
+    margin: 0 0 1em 1em; 
+}
+
+/*  Lists
+----------------------------- */
+
+ul, ol, dl {
+    margin-bottom: $spacing;
+    margin-left: 20px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin-bottom: 0;
+}
+
+ul.disc {
+    list-style: disc;
+    margin-bottom: $spacing;
+    margin-left: 20px;
+}
+
+ol {
+    list-style: decimal;
+}
+
+dl {
+    margin-left: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+}
+
+.no-style {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*  Heading
+-----------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    font-family:$heading-font-family;
+    margin-bottom: 1em;
+    color: $heading-font-color;
+}
+
+h1,
+.h1 {
+    font-size: 24px;
+    font-weight: $bold;
+}
+
+h2,
+.h2 {
+    font-size: 22px;
+}
+
+h3,
+.h3 {
+    font-size: 18px;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+    font-size: 16px;
+}
+
+h4,
+.h4 {
+    text-transform: uppercase;
+}
+
+/*  Lines, Quotes, Emphasis
+----------------------------- */
+
+/*  Lines */
+hr {
+    margin: em(32) auto;
+    border: 0;
+    border-top: em(1) solid $gray;
+    border-bottom: 0 solid $white;
+}
+
+/*  Bold */
+strong {
+    font-weight: bold;
+}
+
+/*  Italics */
+em {
+    font-style: italic;
+}
+
+/*  Subscript & Superscript */
+sub,
+sup {
+    position: relative;
+    font-size: 85%;
+    font-weight: bold;
+    line-height: 0;
+    vertical-align: baseline;
+    margin-left: 4px;
+}
+
+sup {
+    top: -8px;
+}
+
+sub {
+    bottom: -4px;
+}
+
+/*  Highlighting colors */
+::selection {
+    color: $white;
+    background: $blue;
+}
+
+::-moz-selection {
+    color: $white;
+    background: $blue;
+}
+
+/*  Blockquotes */
+blockquote {
+    border-left: 4px solid $blue;
+    margin-bottom: $spacing;
+    padding-left: $spacing;
+    padding-right: $spacing;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+/*  Pre, Code
+----------------------------- */
+
+pre, code, kbd, samp {
+    font-family: $mono;
+    _font-family: 'Courier New', monospace;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*  Forms
+----------------------------- */
+
+form,
+fieldset {
+    margin-bottom: $spacing;
+}
+
+legend,
+label {
+    display: block;
+    font-weight: normal;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    font: inherit;
+    line-height: 1.5;
+    color: tint($black, 18%);
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid $gray;
+    border-radius: 1px;
+}
+
+form button,
+form .button {
+    margin-bottom: 20px;
+}
+
+textarea {
+    height: 12em;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0;
+    outline: thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+input[type="submit"],
+button {
+    border: none;
+    background-color: $blue;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: darken($blue, 10);
+}
+
+.input-inline {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+
+/*  Condensed Inputs */
+.input-condensed {
+    padding: 1px 5px;
+    font-size: 15px;
+}
+
+/*  Tables
+----------------------------- */
+
+table {
+    background: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 0 18px;
+    border: 1px solid #ddd;
+}
+
+table thead,
+table tfoot {
+    background: #f5f5f5;
+}
+
+table thead tr th,
+table tfoot tr th,
+table tbody tr td,
+table tr td,
+table tfoot tr td {
+    display: table-cell;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+table thead tr th,
+table tfoot tr td {
+    padding: 8px 10px 9px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+table thead tr th:first-child,
+table tfoot tr td:first-child {
+    border-left: none;
+}
+
+table thead tr th:last-child,
+table tfoot tr td:last-child {
+    border-right: none;
+}
+
+table tbody tr.even,
+table tbody tr.alt {
+    background: #f9f9f9;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tbody tr td {
+    color: #333;
+    padding: 9px 10px;
+    vertical-align: top;
+    border: none;
+}
+
+/*  Layout
+----------------------------- */
+
+#page {
+    width: 960px;
+    margin: 40px auto;
+    padding: 0 40px;
+    background: $white;
+    -moz-box-shadow: 0 0 5px lighten($black, 30);
+    -webkit-box-shadow: 0 0 5px lighten($black, 30);
+    box-shadow: 0 0 5px lighten($black, 30);
+}
+
+/*  Header
+----------------------------- */
+
+header {
+    padding: 40px 0 40px 0;
+}
+
+.logo {
+    margin-bottom: 40px;
+
+    h1 {
+        margin-bottom: 0.5em;
+    }
+
+    a {
+        color: $black;
+        text-decoration: none;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    .headline {
+        font-family: $serif;
+        font-style: italic;
+        color: $black;
+    }
+}
+
+nav.navigation {
+
+    ul {
+
+        margin: 0;
+        padding: 10px 0;
+        list-style-type: none;
+        border-top: $gray solid 1px;
+        border-bottom: $gray solid 1px;
+
+        li {
+            display: inline-block;
+        }
+
+        li a {
+            font-size: 12px;
+            font-weight: $light;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding-right: 2em;
+            color: lighten($black, 20);
+        }
+
+        li a:hover {
+            color: $blue;
+        }
+    }
+
+    .current {
+        font-weight: $bold;
+    }
+}
+
+/*  Main content
+----------------------------- */
+
+.main-content { }
+
+.content {
+    width: 625px;
+    float: left;
+
+    .entry {
+        margin-bottom: 40px;
+
+        h3 a {
+            color: $blue;
+            text-decoration: none;
+
+            &:hover {
+                color: $black;
+            }
+        }
+
+        .info {
+            font-size: 80%;
+            color: lighten($black, 20);
+        }
+    }
+}
+
+.sidebar {
+    width: 250px;
+    float: right;
+    font-size: 13px;
+
+    h3, h3 a {
+        font-size: 11px;
+        font-weight: $bold;
+        margin: 1em 0 2em 0;
+        text-transform: uppercase;
+    }
+
+    ul {
+        margin: 0 0 20px 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    a {
+        color: lighten($black, 40);
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+/*  Footer
+----------------------------- */
+
+footer {
+    padding: 20px 0 40px 0;
+    width: 100%;
+    border-top: $gray solid 1px;
+    clear: both;
+
+    p {
+        text-align: center;
+        font-size: 80%;
+    }
+
+    a {
+        color: lighten($black, 20);
+    }
+}
+
+/*  Misc
+----------------------------- */
+.left { float: left; }
+.right { float: right; }
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+/* All mobile sizes
+----------------------------- */
+
+@media (max-width: 767px) {
+    
+    body {
+        padding: 1em;
+        background: $white;
+    }
+
+    #page {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+
+    .content, .sidebar {
+        width: 100%;
+        float: left;
+    }
+} 
+

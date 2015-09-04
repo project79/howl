@@ -1,0 +1,602 @@
+/* Howl Theme for Wolfcms by Dejan Andjelkovic, 2015 */
+/* Reset
+----------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  Base 
+----------------------------- */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #e5e5e5;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/*  Links
+----------------------------- */
+a {
+  color: #2980b9;
+  text-decoration: none;
+  word-wrap: break-word;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+a img {
+  border: none;
+  background: none;
+}
+
+a:hover img {
+  border: none;
+  background: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+/*  Typography
+----------------------------- */
+p {
+  margin-bottom: 1.5em;
+}
+
+p.lead {
+  font-size: 1.2em;
+}
+
+/*  Images
+----------------------------- */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+p img {
+  margin: 0;
+}
+
+p img.left {
+  float: left;
+  margin: 0 1em 1em 0;
+  padding: 0;
+}
+
+p img.right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+/*  Lists
+----------------------------- */
+ul, ol, dl {
+  margin-bottom: 1.5em;
+  margin-left: 20px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+ul.disc {
+  list-style: disc;
+  margin-bottom: 1.5em;
+  margin-left: 20px;
+}
+
+ol {
+  list-style: decimal;
+}
+
+dl {
+  margin-left: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+.no-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/*  Heading
+-----------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-family: Helvetica, Arial, Verdana, sans-serif;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+h1,
+.h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  font-size: 22px;
+}
+
+h3,
+.h3 {
+  font-size: 18px;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+  font-size: 16px;
+}
+
+h4,
+.h4 {
+  text-transform: uppercase;
+}
+
+/*  Lines, Quotes, Emphasis
+----------------------------- */
+/*  Lines */
+hr {
+  margin: em(32) auto;
+  border: 0;
+  border-top: em(1) solid #e5e5e5;
+  border-bottom: 0 solid #fff;
+}
+
+/*  Bold */
+strong {
+  font-weight: bold;
+}
+
+/*  Italics */
+em {
+  font-style: italic;
+}
+
+/*  Subscript & Superscript */
+sub,
+sup {
+  position: relative;
+  font-size: 85%;
+  font-weight: bold;
+  line-height: 0;
+  vertical-align: baseline;
+  margin-left: 4px;
+}
+
+sup {
+  top: -8px;
+}
+
+sub {
+  bottom: -4px;
+}
+
+/*  Highlighting colors */
+::selection {
+  color: #fff;
+  background: #2980b9;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #2980b9;
+}
+
+/*  Blockquotes */
+blockquote {
+  border-left: 4px solid #2980b9;
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+/*  Pre, Code
+----------------------------- */
+pre, code, kbd, samp {
+  font-family: "Consolas", "Lucida Console", "Courier New", "Monaco", Courier, monospace;
+  _font-family: 'Courier New', monospace;
+  font-size: 1em;
+  margin: 1em 0;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*  Forms
+----------------------------- */
+form,
+fieldset {
+  margin-bottom: 1.5em;
+}
+
+legend,
+label {
+  display: block;
+  font-weight: normal;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  font: inherit;
+  line-height: 1.5;
+  color: tint(#333, 18%);
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 1px solid #e5e5e5;
+  border-radius: 1px;
+}
+
+form button,
+form .button {
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 12em;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  outline: 0;
+  outline: thin dotted \9;
+}
+
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+input[type="submit"],
+button {
+  border: none;
+  background-color: #2980b9;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #20638f;
+}
+
+.input-inline {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+/*  Condensed Inputs */
+.input-condensed {
+  padding: 1px 5px;
+  font-size: 15px;
+}
+
+/*  Tables
+----------------------------- */
+table {
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 0 18px;
+  border: 1px solid #ddd;
+}
+
+table thead,
+table tfoot {
+  background: #f5f5f5;
+}
+
+table thead tr th,
+table tfoot tr th,
+table tbody tr td,
+table tr td,
+table tfoot tr td {
+  display: table-cell;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+}
+
+table thead tr th,
+table tfoot tr td {
+  padding: 8px 10px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+}
+
+table thead tr th:first-child,
+table tfoot tr td:first-child {
+  border-left: none;
+}
+
+table thead tr th:last-child,
+table tfoot tr td:last-child {
+  border-right: none;
+}
+
+table tbody tr.even,
+table tbody tr.alt {
+  background: #f9f9f9;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tbody tr td {
+  color: #333;
+  padding: 9px 10px;
+  vertical-align: top;
+  border: none;
+}
+
+/*  Layout
+----------------------------- */
+#page {
+  width: 960px;
+  margin: 40px auto;
+  padding: 0 40px;
+  background: #fff;
+  -moz-box-shadow: 0 0 5px gray;
+  -webkit-box-shadow: 0 0 5px gray;
+  box-shadow: 0 0 5px gray;
+}
+
+/*  Header
+----------------------------- */
+header {
+  padding: 40px 0 40px 0;
+}
+
+.logo {
+  margin-bottom: 40px;
+}
+.logo h1 {
+  margin-bottom: 0.5em;
+}
+.logo a {
+  color: #333;
+  text-decoration: none;
+}
+.logo a:hover {
+  color: #2980b9;
+}
+.logo .headline {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  color: #333;
+}
+
+nav.navigation ul {
+  margin: 0;
+  padding: 10px 0;
+  list-style-type: none;
+  border-top: #e5e5e5 solid 1px;
+  border-bottom: #e5e5e5 solid 1px;
+}
+nav.navigation ul li {
+  display: inline-block;
+}
+nav.navigation ul li a {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-right: 2em;
+  color: #666666;
+}
+nav.navigation ul li a:hover {
+  color: #2980b9;
+}
+nav.navigation .current {
+  font-weight: 700;
+}
+
+/*  Main content
+----------------------------- */
+.content {
+  width: 625px;
+  float: left;
+}
+.content .entry {
+  margin-bottom: 40px;
+}
+.content .entry h3 a {
+  color: #2980b9;
+  text-decoration: none;
+}
+.content .entry h3 a:hover {
+  color: #333;
+}
+.content .entry .info {
+  font-size: 80%;
+  color: #666666;
+}
+
+.sidebar {
+  width: 250px;
+  float: right;
+  font-size: 13px;
+}
+.sidebar h3, .sidebar h3 a {
+  font-size: 11px;
+  font-weight: 700;
+  margin: 1em 0 2em 0;
+  text-transform: uppercase;
+}
+.sidebar ul {
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style-type: none;
+}
+.sidebar a {
+  color: #999999;
+}
+.sidebar a:hover {
+  color: #2980b9;
+}
+
+/*  Footer
+----------------------------- */
+footer {
+  padding: 20px 0 40px 0;
+  width: 100%;
+  border-top: #e5e5e5 solid 1px;
+  clear: both;
+}
+footer p {
+  text-align: center;
+  font-size: 80%;
+}
+footer a {
+  color: #666666;
+}
+
+/*  Misc
+----------------------------- */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* All mobile sizes
+----------------------------- */
+@media (max-width: 767px) {
+  body {
+    padding: 1em;
+    background: #fff;
+  }
+
+  #page {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .content, .sidebar {
+    width: 100%;
+    float: left;
+  }
+}
