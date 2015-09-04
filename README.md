@@ -10,3 +10,4 @@ Howl theme for Wolfcms. Simple and responsive blog theme.
 - Save
 - Under Pages tab, select Homepage -> Settings tab and select "howl" theme under Page Layout
 - Save page and view your site
+
